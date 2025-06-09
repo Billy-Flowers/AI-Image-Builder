@@ -1,0 +1,16 @@
+### Test the root endpoint
+GET http://localhost:8080
+
+### Test the posts endpoint
+GET http://localhost:8080/api/posts
+
+### Test image generation
+POST http://localhost:8080/api/generateImage
+Content-Type: application/json
+
+{
+  "prompt": "A cat chilling on the beach with round stylish sunglasses"
+}
+
+### View the last generated image
+GET http://localhost:8080/view-last-image

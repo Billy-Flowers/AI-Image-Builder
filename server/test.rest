@@ -1,0 +1,10 @@
+### Test if REST Client is working
+GET http://localhost:8081
+
+### Test POST request
+POST http://localhost:8081/test
+Content-Type: application/json
+
+{
+  "test": "Hello world"
+}
