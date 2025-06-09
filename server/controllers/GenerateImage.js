@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-import { createError } from "../error.js";
+import { createError } from "../errors/error.js";
 import OpenAI from "openai";
 
 dotenv.config();
