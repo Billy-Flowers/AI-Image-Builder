@@ -10,3 +10,4 @@ This application takes a user prompt, sends it to the OpenAI API (DALL·E 2), an
 | **Cloud**    | Cloudinary for image storage            |
 | **AI**       | OpenAI API (DALL·E 2 model)             |
 
+![Image](https://github.com/user-attachments/assets/b62d0bbb-1ba9-4c8f-b71f-6cc4fa9ac7b3)
