@@ -15,3 +15,5 @@ This application takes a user prompt, sends it to the OpenAI API (DALL·E 2), an
 
 ## Create Post
 ![Image](https://github.com/user-attachments/assets/87f81379-afc5-4d92-91c2-9c3e55705c7a)
+
+The Dall-E 2 model is not that great, but it is cheap. 👍
