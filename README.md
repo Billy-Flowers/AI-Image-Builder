@@ -11,4 +11,7 @@ This application takes a user prompt, sends it to the OpenAI API (DALL·E 2), an
 | **AI**       | OpenAI API (DALL·E 2 model)             |
 
 ## Homepage
-![Image](https://github.com/user-attachments/assets/b62d0bbb-1ba9-4c8f-b71f-6cc4fa9ac7b3)
+![Image](https://github.com/user-attachments/assets/5947b340-cd1e-41f9-ba51-197d62c386e4) 
+
+## Create Post
+![Image](https://github.com/user-attachments/assets/87f81379-afc5-4d92-91c2-9c3e55705c7a)
