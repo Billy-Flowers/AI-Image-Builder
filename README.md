@@ -18,7 +18,7 @@ This application takes a user prompt, sends it to the OpenAI API (DALL·E 2), an
 
 The Dall-E 2 model is not that great, but it is cheap. 👍
 
-#Getting Started
+# Getting Started
 Clone the Repository:
 git clone https://github.com/Billy-Flowers/AI-Image-Builder.git
 cd AI-Image-Builder
@@ -49,12 +49,10 @@ node server.js
 Interact with the frontend by entering text prompts and viewing generated images.
 GitHub
 
-##Deployment
+## Deployment
 To deploy your application, consider using platforms like Heroku or Vercel. Ensure you configure environment variables and set up the necessary build processes as per the platform's documentation.
 
-##Next Steps
-Enhance the Frontend: Add features like image downloading, prompt history, or user authentication.
-
-Optimize Performance: Implement caching mechanisms or use a CDN for faster image delivery.
-
-Expand Model Support: Integrate other AI models or offer users the choice of models for image generation.
+## Next Steps
+- Enhance the Frontend: Add features like image downloading, prompt history, or user authentication.
+- Optimize Performance: Implement caching mechanisms or use a CDN for faster image delivery.
+- Expand Model Support: Integrate other AI models or offer users the choice of models for image generation.
