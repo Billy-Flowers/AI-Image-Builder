@@ -19,42 +19,38 @@ This application takes a user prompt, sends it to the OpenAI API (DALL·E 2), an
 The Dall-E 2 model is not that great, but it is cheap. 👍
 
 # Getting Started
-Clone the Repository:
+### Clone the Repository:
 ```
 git clone https://github.com/Billy-Flowers/AI-Image-Builder.git
 cd AI-Image-Builder
 ```
 
-Set Up Backend:
+### Set Up Backend:
 Navigate to the backend directory.
 Install dependencies:
 ```
 npm install
 ```
 
-Create a .env file and add your API key:
+### Create a .env file and add your API key:
 ```
 API_KEY=your_api_key_here
 ```
 
-Set Up Frontend:
-
+### Set Up Frontend:
 Navigate to the frontend directory.
 ```
 npm start
 ```
-### Runs the app in the development mode. 
-### Open http://localhost:3000 to view it in your browser.
+Runs the app in the development mode. 
+Open http://localhost:3000 to view it in your browser.
 
-The page will reload when you make changes.
-
-
-Start the backend server:
+### Start the backend server:
 ```
 node server.js
 ```
 Interact with the frontend by entering text prompts and viewing generated images.
-GitHub
+
 
 ## Deployment
 To deploy your application, consider using platforms like Heroku or Vercel. Ensure you configure environment variables and set up the necessary build processes as per the platform's documentation.
