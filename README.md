@@ -20,22 +20,29 @@ The Dall-E 2 model is not that great, but it is cheap. 👍
 
 # Getting Started
 Clone the Repository:
+```
 git clone https://github.com/Billy-Flowers/AI-Image-Builder.git
 cd AI-Image-Builder
+```
 
 Set Up Backend:
 Navigate to the backend directory.
 Install dependencies:
+```
 npm install
+```
 
 Create a .env file and add your API key:
+```
 API_KEY=your_api_key_here
+```
 
 Set Up Frontend:
 
 Navigate to the frontend directory.
-
+```
 npm start
+```
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in your browser.
 
@@ -44,8 +51,9 @@ The page will reload when you make changes.
 Run the Application:
 
 Start the backend server:
-
+```
 node server.js
+```
 Interact with the frontend by entering text prompts and viewing generated images.
 GitHub
 
