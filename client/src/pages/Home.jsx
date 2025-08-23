@@ -117,7 +117,7 @@ const Home = () => {
   return (
     <Container>
       <HeadLine>
-        Explore popular posts in the Community!
+        Feel free to leave your Mark to the Community!
         <Span>Generated with AI</Span>
       </HeadLine>
       <SearchBar
