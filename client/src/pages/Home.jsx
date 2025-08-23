@@ -10,7 +10,7 @@ const Container = styled.div`
   min-height: 100vh;
   overflow-y: scroll;
   background: ${({ theme }) => theme.bg};
-  padding: 30px;
+  padding: 20px;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,7 @@ const HeadLine = styled.div`
   font-weight: 500;
   color: ${({ theme }) => theme.text_primary};
   display: flex;
+  padding-bottom: 10px;
   align-items: center;
   flex-direction: column;
 

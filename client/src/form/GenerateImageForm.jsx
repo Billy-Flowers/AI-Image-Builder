@@ -55,11 +55,13 @@ const GenerateImageForm = ({
   const generateImage = async () => {
     setGenerateImageLoading(true);
     setError("");
-    await GenerateImageFromPrompt({ prompt: post.prompt })
+    const promptForGeneration = post.prompt; 
+    await GenerateImageFromPrompt({ prompt: promptForGeneration })
       .then((res) => {
         setPost({
           ...post,
           photo: `data:image/jpeg;base64,${res?.data?.photo}`,
+          generatedPrompt: promptForGeneration, 
         });
         setGenerateImageLoading(false);
       })
@@ -72,19 +74,25 @@ const GenerateImageForm = ({
 const createPost = async () => {
   setcreatePostLoading(true);
   setError("");
-  console.log("Sending post data:", post);
-  await CreatePost(post)
-    .then((res) => {
-      console.log("Post created successfully:", res);
-      navigate("/");
-      setcreatePostLoading(false);
-    })
-    .catch((error) => {
-      console.error("Error creating post:", error);
-      setError(error?.response?.data?.message || "Failed to create post");
-      setcreatePostLoading(false);
-    });
-};
+  const postData = {
+    name: post.name,
+    prompt: post.generatedPrompt,
+    photo: post.photo,
+  };
+  console.log("Sending post data:", postData);
+    await CreatePost(postData)
+      .then((res) => {
+        console.log("Post created successfully:", res);
+        navigate("/");
+        setcreatePostLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error creating post:", error);
+        setError(error?.response?.data?.message || "Failed to create post");
+        setcreatePostLoading(false);
+      });
+  };
+
   
   return (
     <Form>
