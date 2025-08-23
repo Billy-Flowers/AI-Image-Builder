@@ -117,7 +117,7 @@ const Home = () => {
   return (
     <Container>
       <HeadLine>
-        Feel free to leave your Mark to the Community!
+        Feel free to leave your Mark on the Community!
         <Span>Generated with AI</Span>
       </HeadLine>
       <SearchBar
