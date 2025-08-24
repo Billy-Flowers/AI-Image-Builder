@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styled from "styled-components";
-import { AddRounded, ExploreRounded, DarkModeOutlined, LightModeOutlined } from '@mui/icons-material'
 import Button from './button';
+import { AddRounded, ExploreRounded, DarkModeOutlined, LightModeOutlined, InfoRounded } from '@mui/icons-material'
 
 const Container = styled.div`
     flex: 1;
@@ -62,10 +62,10 @@ const ThemeButton = styled.button`
     }
 `;
 
-
 const ButtonContainer = styled.div`
     display: flex;
     align-items: center;
+    gap: 10px;
 `;
 
 const Navbar = ({ isDarkMode, toggleTheme }) => {
@@ -91,6 +91,12 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                         leftIcon={<AddRounded sx={{ fontSize: "18px" }} />}
                     />              
                 )}
+                    <Button
+                        type="secondary"
+                        onClick={() => navigate("/about")}
+                        text="About"
+                        leftIcon={<InfoRounded sx={{ fontSize: "18px" }} />}                
+                    />
                 <ThemeButton onClick={toggleTheme}>
                     {isDarkMode ? 
                         <LightModeOutlined sx={{ fontSize: "24px" }} /> : 

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import CreatePost from "./pages/CreatePost";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import About from "./pages/About";
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -40,6 +41,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home/>} exact/>
               <Route path="/post" element={<CreatePost/>} exact/>
+              <Route path="/about" element={<About/>} />
             </Routes>
           </BrowserRouter>
         </Wrapper>
