@@ -56,16 +56,19 @@ const GenerateImageForm = ({
     setGenerateImageLoading(true);
     setError("");
     const promptForGeneration = post.prompt; 
+    const authorForGeneration = post.name;
     await GenerateImageFromPrompt({ prompt: promptForGeneration })
       .then((res) => {
         setPost({
           ...post,
           photo: `data:image/jpeg;base64,${res?.data?.photo}`,
           generatedPrompt: promptForGeneration, 
+          generatedAuthor: authorForGeneration,
         });
         setGenerateImageLoading(false);
       })
       .catch((error) => {
+        alert("Unable to be generate Image. Please try a different prompt.");
         setError(error?.response?.data?.message);
         setGenerateImageLoading(false);
       });
@@ -75,7 +78,7 @@ const createPost = async () => {
   setcreatePostLoading(true);
   setError("");
   const postData = {
-    name: post.name,
+    name: post.generatedAuthor,
     prompt: post.generatedPrompt,
     photo: post.photo,
   };
@@ -133,7 +136,7 @@ const createPost = async () => {
           type="secondary"
           flex
           isDisabled={
-            post.name === "" || post.photo === "" || post.prompt === ""
+            !post.generatedAuthor || !post.photo || !post.generatedPrompt
           }
           isLoading={createPostLoading}
           onClick={() => createPost()}

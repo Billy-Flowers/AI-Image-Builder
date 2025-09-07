@@ -71,6 +71,15 @@ const NoPostsMessage = styled.div`
   color: ${({ theme }) => theme.text_secondary};
   opacity: 0.7;
 `
+const LoadingMessage = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary};
+`;
 
 
 const Home = () => {
@@ -128,8 +137,14 @@ const Home = () => {
       <Wrapper>
         {error && <div style={{ color: "red" }}>{error}</div>}
         {loading ? (
-          <CircularProgress />
-        ) : 
+          <LoadingMessage>
+            <CircularProgress />
+            Loading images...
+            <div style={{ fontSize: "14px", opacity: "0.7" }}>
+              Please wait, this may take a moment
+            </div>
+          </LoadingMessage>
+        ) :  
           filteredPost.length > 0 ? (
             <CardWrapper>
               {filteredPost

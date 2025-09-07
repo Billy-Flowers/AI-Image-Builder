@@ -1,4 +1,3 @@
-// pages/About.jsx
 import styled from "styled-components";
 import { GitHub, LinkedIn, Email } from '@mui/icons-material';
 
